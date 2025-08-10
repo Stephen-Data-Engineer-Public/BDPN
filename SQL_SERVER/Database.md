@@ -1,3 +1,8 @@
+
+
+ Windows Users:
+
+```sql
 CREATE DATABASE BDPN
 ON PRIMARY 
 (
@@ -15,3 +20,10 @@ LOG ON
     MAXSIZE = 25MB,
     FILEGROWTH = 5MB
 );
+```
+
+Mac Users:
+
+```sql
+CREATE DATABASE BDPN;
+```
