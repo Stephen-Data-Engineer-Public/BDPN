@@ -1,3 +1,5 @@
+ Windows Users:
+
 Find the SQL Server service account name run in SSMS as sysadmin:
 ```sql
 SELECT servicename, service_account
@@ -9,8 +11,8 @@ Verify SQL Server can see the folder
 EXEC xp_fileexist 'C:\BDPN_SQL_SERVER';
 ```
 
- Windows Users:
 
+run in SSMS: 
 ```sql
 CREATE DATABASE BDPN
 ON PRIMARY 
@@ -32,7 +34,7 @@ LOG ON
 ```
 
 Mac Users:
-
+ run in SSMS: 
 ```sql
 CREATE DATABASE BDPN;
 ```
