@@ -27,19 +27,9 @@ CREATE TABLE table_name (
 | `BOOLEAN`      | True/False value                                  |
 
 
-**3️ Adding a Primary Key**
 
-```sql
-PRIMARY KEY (column_name)
-```
 
-**4️ Adding a Foreign Key**
-
-```sql
-FOREIGN KEY (column_name) REFERENCES parent_table(parent_column)
-```
-
-**5️ Example**
+**53 Example**
 
 ```sql
 CREATE TABLE Departments (
