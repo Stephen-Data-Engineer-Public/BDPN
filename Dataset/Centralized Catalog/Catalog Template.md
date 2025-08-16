@@ -35,7 +35,7 @@
 
 * Access Level: Restricted to Sales Analysts and Finance Team
 * Data Sensitivity: Contains PII (CustomerID)
-* Compliance: GDPR, PCI-DSS
+* Compliance: GDPR
 
 **6. Lineage**
 
