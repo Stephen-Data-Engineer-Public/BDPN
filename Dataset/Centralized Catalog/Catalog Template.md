@@ -37,7 +37,7 @@
 * Data Sensitivity: Contains PII (CustomerID)
 * Compliance: GDPR, PCI-DSS
 
-**6. Lineage **
+**6. Lineage**
 
 * Source: 
 * Downstream Usage: Power BI dashboards, Finance reports
