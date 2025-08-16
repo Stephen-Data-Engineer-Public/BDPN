@@ -42,3 +42,5 @@
 * Source: 
 * Downstream Usage: Power BI dashboards, Finance reports
 
+**7. ERD**
+
