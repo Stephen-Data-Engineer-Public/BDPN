@@ -6,10 +6,6 @@ TRUE.​
 For each customer, calculate the percentage of their orders that were delivered for free.​
 Assume free delivery applies when the order total is at least $150.​
 
-## Find top customers by payment method usage​
-For each payment method (Cash, Debit Card, Online Payment, Credit Card), find the customer(s) with
-the highest percentage of orders paid using that method.​
-
 ## List pending deliveries (excluding blacklisted customers)​
 The result should include: order_id, customer_address, & carrier​
 Find the second highest purchase per customer​
