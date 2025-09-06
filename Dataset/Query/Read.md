@@ -41,3 +41,21 @@ SELECT [customer_id], CAST((COUNT(Order_qlf_free_Dl) * 100) / COUNT(*)AS DECIMAL
 FROM CTE
 GROUP BY [customer_id]
 ```
+
+```sql
+WITH CTE AS (
+SELECT [order_id]
+      ,[store_location]
+      ,[customer_id]
+      ,[order_date]
+	  ,[total_amount]
+      ,SUM([total_amount]) OVER (PARTITION BY NULL )   AS Total_All_location 
+	  ,SUM([total_amount]) OVER (PARTITION BY [store_location] )  total_per_location
+      ,[payment_method]
+  FROM [orders]
+)
+SELECT *
+FROM CTE
+
+-- If you don't use partition for the Total_All_location you will have to use GROUP BY
+```
