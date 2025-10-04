@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics for Data</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            position: relative;
+        }
+        .code-block h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .output {
+            background: #282828;
+            border-left: 3px solid #4CAF50;
+            padding: 10px;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+        .explanation {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .explanation h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background: #45a049;
+        }
+        .keyword { color: #569cd6; }
+        .string { color: #ce9178; }
+        .number { color: #b5cea8; }
+        .comment { color: #6A9955; }
+        .function { color: #dcdcaa; }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .section-title {
+            grid-column: 1 / -1;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 20px 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐍 Python Basics for Data Work</h1>
+    
+    <div class="section-title">
+        <h2>Part 1: Variables and Data Types</h2>
+    </div>
+    
+    <div class="container">
+        <div class="code-block">
+            <h3>Code to Type:</h3>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code><span class="comment"># Storing data in variables</span>
+<span class="keyword">company_name</span> = <span class="string">"TechCorp"</span>
+<span class="keyword">employee_count</span> = <span class="number">1250</span>
+<span class="keyword">average_salary</span> = <span class="number">75000.50</span>
+<span class="keyword">is_public</span> = <span class="keyword">True</span>
+
+<span class="comment"># Display our data</span>
+<span class="function">print</span>(<span class="string">f"Company: {company_name}"</span>)
+<span class="function">print</span>(<span class="string">f"Employees: {employee_count}"</span>)
+<span class="function">print</span>(<span class="string">f"Avg Salary: ${average_salary}"</span>)
+<span class="function">print</span>(<span class="string">f"Public? {is_public}"</span>)</code></pre>
+            <div class="output">
+Company: TechCorp
+Employees: 1250
+Avg Salary: $75000.5
+Public? True
+            </div>
+        </div>
+        <div class="explanation">
+            <h3>What's Happening?</h3>
+            <p><strong>Variables</strong> are containers for data. Unlike SQL where you work with columns, in Python you create individual named containers.</p>
+            <ul>
+                <li><strong>Strings</strong>: Text data (like VARCHAR in SQL)</li>
+                <li><strong>Integers</strong>: Whole numbers</li>
+                <li><strong>Floats</strong>: Decimal numbers</li>
+                <li><strong>Booleans</strong>: True/False values</li>
+            </ul>
+            <p>💡 <strong>Clean Code Tip:</strong> Use descriptive names with underscores between words (snake_case)</p>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Part 2: Lists (Your First Data Structure)</h2>
+    </div>
+    
+    <div class="container">
+        <div class="code-block">
+            <h3>Code to Type:</h3>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code><span class="comment"># Creating lists (like arrays/columns)</span>
+<span class="keyword">sales_regions</span> = [<span class="string">"North"</span>, <span class="string">"South"</span>, <span class="string">"East"</span>, <span class="string">"West"</span>]
+<span class="keyword">q1_sales</span> = [<span class="number">125000</span>, <span class="number">98000</span>, <span class="number">142000</span>, <span class="number">117000</span>]
+
+<span class="comment"># Accessing data</span>
+<span class="function">print</span>(<span class="string">f"First region: {sales_regions[0]}"</span>)
+<span class="function">print</span>(<span class="string">f"Its sales: ${q1_sales[0]}"</span>)
+
+<span class="comment"># Adding new data</span>
+sales_regions.<span class="function">append</span>(<span class="string">"Central"</span>)
+q1_sales.<span class="function">append</span>(<span class="number">105000</span>)
+
+<span class="comment"># How many regions?</span>
+<span class="function">print</span>(<span class="string">f"Total regions: {len(sales_regions)}"</span>)</code></pre>
+            <div class="output">
+First region: North
+Its sales: $125000
+Total regions: 5
+            </div>
+        </div>
+        <div class="explanation">
+            <h3>What's Happening?</h3>
+            <p><strong>Lists</strong> are ordered collections of items. Think of them as a single column from a SQL table.</p>
+            <ul>
+                <li>Access items using index (starting at 0)</li>
+                <li>Add items with <code>.append()</code></li>
+                <li>Get length with <code>len()</code></li>
+            </ul>
+            <p>💡 <strong>Clean Code Tip:</strong> Use plural names for lists (sales_regions not sales_region)</p>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Part 3: Dictionaries (Key-Value Pairs)</h2>
+    </div>
+    
+    <div class="container">
+        <div class="code-block">
+            <h3>Code to Type:</h3>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code><span class="comment"># Dictionary = like a single row from SQL</span>
+<span class="keyword">employee</span> = {
+    <span class="string">"id"</span>: <span class="number">1001</span>,
+    <span class="string">"name"</span>: <span class="string">"Sarah Chen"</span>,
+    <span class="string">"department"</span>: <span class="string">"Data Analytics"</span>,
+    <span class="string">"salary"</span>: <span class="number">95000</span>,
+    <span class="string">"remote"</span>: <span class="keyword">True</span>
+}
+
+<span class="comment"># Accessing values</span>
+<span class="function">print</span>(<span class="string">f"Employee: {employee['name']}"</span>)
+<span class="function">print</span>(<span class="string">f"Department: {employee['department']}"</span>)
+
+<span class="comment"># Adding new information</span>
+employee[<span class="string">"years_experience"</span>] = <span class="number">5</span>
+
+<span class="comment"># Updating existing info</span>
+employee[<span class="string">"salary"</span>] = <span class="number">98000</span>
+<span class="function">print</span>(<span class="string">f"New salary: ${employee['salary']}"</span>)</code></pre>
+            <div class="output">
+Employee: Sarah Chen
+Department: Data Analytics
+New salary: $98000
+            </div>
+        </div>
+        <div class="explanation">
+            <h3>What's Happening?</h3>
+            <p><strong>Dictionaries</strong> store data in key-value pairs. Like a single row where column names are keys.</p>
+            <ul>
+                <li>Access values using keys in square brackets</li>
+                <li>Add new keys anytime</li>
+                <li>Update values by reassigning</li>
+            </ul>
+            <p>💡 <strong>This is huge for data work!</strong> JSON APIs return dictionaries, config files use them, and they're the foundation of DataFrames.</p>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Part 4: Simple Data Processing</h2>
+    </div>
+    
+    <div class="container">
+        <div class="code-block">
+            <h3>Code to Type:</h3>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+            <pre><code><span class="comment"># List of dictionaries = like a SQL table!</span>
+<span class="keyword">sales_data</span> = [
+    {<span class="string">"month"</span>: <span class="string">"Jan"</span>, <span class="string">"revenue"</span>: <span class="number">125000</span>, <span class="string">"costs"</span>: <span class="number">80000</span>},
+    {<span class="string">"month"</span>: <span class="string">"Feb"</span>, <span class="string">"revenue"</span>: <span class="number">135000</span>, <span class="string">"costs"</span>: <span class="number">85000</span>},
+    {<span class="string">"month"</span>: <span class="string">"Mar"</span>, <span class="string">"revenue"</span>: <span class="number">118000</span>, <span class="string">"costs"</span>: <span class="number">78000</span>}
+]
+
+<span class="comment"># Calculate profit for each month</span>
+<span class="keyword">for</span> month_data <span class="keyword">in</span> sales_data:
+    profit = month_data[<span class="string">"revenue"</span>] - month_data[<span class="string">"costs"</span>]
+    <span class="function">print</span>(<span class="string">f"{month_data['month']}: ${profit} profit"</span>)
+
+<span class="comment"># Calculate total revenue</span>
+<span class="keyword">total_revenue</span> = <span class="number">0</span>
+<span class="keyword">for</span> month_data <span class="keyword">in</span> sales_data:
+    total_revenue += month_data[<span class="string">"revenue"</span>]
+    
+<span class="function">print</span>(<span class="string">f"\nQ1 Total Revenue: ${total_revenue}"</span>)</code></pre>
+            <div class="output">
+Jan: $45000 profit
+Feb: $50000 profit
+Mar: $40000 profit
+
+Q1 Total Revenue: $378000
+            </div>
+        </div>
+        <div class="explanation">
+            <h3>What's Happening?</h3>
+            <p>This structure (list of dictionaries) is <strong>exactly how data comes from APIs and databases</strong>!</p>
+            <ul>
+                <li>Each dictionary is like a row</li>
+                <li>Keys are like column names</li>
+                <li>We loop through to process each row</li>
+            </ul>
+            <p>💡 <strong>Why This Matters:</strong> This is the foundation of ETL! You're extracting data, transforming it (calculating profit), and could easily save results.</p>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const codeBlock = button.parentElement.querySelector('code');
+            const textToCopy = codeBlock.innerText;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

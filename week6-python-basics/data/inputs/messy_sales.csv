@@ -1,0 +1,9 @@
+category,PRODUCT_NAME, price ,Quantity,date
+computing,Dell inspiron,899.99,5,2024-01-15
+computing,Dell latitude, 699.9,3,2024-01-16
+Computing,LOGITECH m15,20,12.0,2024-01-15
+computing,Logitech m20,25.5,8,2024-01-16
+accessory,Logitech mouse pad,10.00,15,2024-01-15
+ACCESSORY,Dell laptop bag,49.99,7,2024-01-16
+Accessory,HP wireless mouse,30.00,10,2024-01-15
+accessory,HP mouse pad,12,20,2024-01-16
